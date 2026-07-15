@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 176" width="720" role="img"><style>
+text{font-family:Inter,-apple-system,system-ui,sans-serif}
+.b{fill:#171122;stroke:#2a2138;stroke-width:1.5}
+.b-a{fill:#241a3a;stroke:#3a2c56;stroke-width:1.5}
+.b-mut{fill:#141020;stroke:#2a2138;stroke-width:1.5}
+.b-gap{fill:#2a1620;stroke:#f0616c;stroke-width:1.6;stroke-dasharray:5 4}
+.t{fill:#ece9f3;font-size:13px;font-weight:600}
+.tm{fill:#a8a2b8;font-size:11.5px}
+.lab{fill:#6f6981;font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.09em}
+.ln{stroke:#6f6981;stroke-width:1.6;fill:none;opacity:.5}
+.ln-a{stroke:#9a72f0;stroke-width:2;fill:none}
+.acc{fill:#9a72f0}.mut{fill:#6f6981}
+.ok{fill:#3ecf8e}.hold{fill:#e0a13a}.block{fill:#f0616c}
+.axis{stroke:#2a2138;stroke-width:1.5}
+</style>
+<defs>
+<marker id="ar" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#6f6981"/></marker>
+<marker id="ara" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#9a72f0"/></marker>
+</defs>
+  <line class="ln" x1="150" y1="54" x2="640" y2="54" style="opacity:.4"/>
+  <!-- node 1 -->
+  <circle class="b" cx="150" cy="54" r="8"/><circle class="acc" cx="150" cy="54" r="3.5"/>
+  <text class="lab" x="150" y="32" text-anchor="middle">WEEK 1</text>
+  <text class="t" x="150" y="82" text-anchor="middle">Observe</text>
+  <text class="tm" x="150" y="100" text-anchor="middle">1 agent, 1 path, run silent</text>
+  <text class="lab" x="150" y="122" text-anchor="middle">EXIT: would-allow / deny report</text>
+  <!-- node 2 -->
+  <circle class="b" cx="395" cy="54" r="8"/><circle class="acc" cx="395" cy="54" r="3.5"/>
+  <text class="lab" x="395" y="32" text-anchor="middle">WEEK 2-3</text>
+  <text class="t" x="395" y="82" text-anchor="middle">Enforce</text>
+  <text class="tm" x="395" y="100" text-anchor="middle">non-prod, then prod approvals</text>
+  <text class="lab" x="395" y="122" text-anchor="middle">EXIT: SLO met, no breakage</text>
+  <!-- node 3 -->
+  <circle class="acc" cx="640" cy="54" r="8.5"/>
+  <text class="lab" x="640" y="32" text-anchor="middle" style="fill:#9a72f0">WEEK 4</text>
+  <text class="t" x="640" y="82" text-anchor="middle">Expand and sign off</text>
+  <text class="tm" x="640" y="100" text-anchor="middle">exec readout, contract</text>
+  <text class="lab" x="640" y="122" text-anchor="middle">EXIT: signed receipt in their audit</text>
+</svg>

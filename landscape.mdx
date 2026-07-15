@@ -1,0 +1,36 @@
+---
+title: "Landscape & battlecards"
+---
+
+<p className="lede">Everyone crowds "agent security". Almost no one <i>decides the action in-path and signs it</i>. Sort them into lanes, then aim at the gap.</p>
+
+<Frame caption="Everyone else sees, or establishes identity, or routes the call. Only Clevr decides the action and signs it.">
+  <img className="block dark:hidden" src="/images/dg-landscape-1.svg" alt="Everyone else sees, or establishes identity, or routes the call. Only Clevr decides the action and signs it." />
+  <img className="hidden dark:block" src="/images/dg-landscape-1-d.svg" alt="" />
+</Frame>
+
+<table>
+<thead><tr><th>Lane</th><th>Who</th><th>What they do</th><th>Gap vs Clevr</th></tr></thead>
+<tbody>
+<tr><td><b>Visibility & posture</b></td><td>Zenity, Noma</td><td>Discover agents, map blast radius, monitor behavior</td><td>Not in-path; observe, don't decide</td></tr>
+<tr><td><b>Identity / NHI</b></td><td>Okta, Silverfort, Astrix, Aembit, Entro, Oak, Orchid</td><td>Agent identity, tokens, secrets, discovery→IGA</td><td>Establish <i>who</i>; don't decide the action</td></tr>
+<tr><td><b>MCP gateway / runtime</b></td><td>Arcade, Kontext, Hodor, RunLayer, Assury</td><td>Route + authenticate tool calls, some policy</td><td>Audit = logs; governance hook often empty; no signed receipt / reasoning; US-centric</td></tr>
+<tr><td><b>Inference classifiers</b></td><td>Reva, Mitrity, Secure Agentics</td><td>LLM parses/judges each action</td><td>Non-deterministic, fail-open, no signed audit</td></tr>
+<tr><td><b>Platform giants</b></td><td>Prisma AIRS (Palo Alto)</td><td>Broad AI runtime security suite</td><td>Concede breadth; win on signed receipt + EU-sovereign + no lock-in</td></tr>
+<tr><td><b>Adjacent governance</b></td><td>Formal</td><td>Data query/mutation governance via proxies</td><td>Data plane, not operational action enforcement</td></tr>
+</tbody>
+</table>
+
+## The one slide
+
+<Info>
+<span>Say this.</span> "Visibility tells you what happened. Identity tells you who. Gateways route the call. Clevr is the only layer that <b>decides the action before it runs</b>, deterministically, and hands you a <b>signed receipt</b>. In the EU, on infrastructure you control."
+</Info>
+
+## Where we concede
+
+<ul>
+<li>Credential vaulting / OAuth-on-behalf-of at scale → identity/NHI vendors lead; we mint scoped creds on-permit, we don't hoard.</li>
+<li>Thousands of pre-built tools / breadth → gateways/marketplaces lead; we govern the ecosystem, we don't rebuild it.</li>
+<li>Full-suite platform coverage → the giants; we're the sharp, provable, sovereign wedge.</li>
+</ul>

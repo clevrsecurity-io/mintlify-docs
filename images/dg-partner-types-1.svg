@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 96" width="720" role="img"><style>
+text{font-family:Inter,-apple-system,system-ui,sans-serif}
+.b{fill:#ffffff;stroke:#e7e4ee;stroke-width:1.5}
+.b-a{fill:#f3edfd;stroke:#e2d6f8;stroke-width:1.5}
+.b-mut{fill:#faf9fc;stroke:#e7e4ee;stroke-width:1.5}
+.b-gap{fill:#fdeaec;stroke:#d64550;stroke-width:1.6;stroke-dasharray:5 4}
+.t{fill:#17131f;font-size:13px;font-weight:600}
+.tm{fill:#565064;font-size:11.5px}
+.lab{fill:#8b8698;font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.09em}
+.ln{stroke:#8b8698;stroke-width:1.6;fill:none;opacity:.5}
+.ln-a{stroke:#4d0fb3;stroke-width:2;fill:none}
+.acc{fill:#4d0fb3}.mut{fill:#8b8698}
+.ok{fill:#0f9d58}.hold{fill:#b7791f}.block{fill:#d64550}
+.axis{stroke:#e7e4ee;stroke-width:1.5}
+</style>
+<defs>
+<marker id="ar" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#8b8698"/></marker>
+<marker id="ara" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#4d0fb3"/></marker>
+</defs>
+  <rect class="b-mut" x="2" y="16" width="142" height="42" rx="11"/><text class="t" x="73" y="42" text-anchor="middle">Refer</text>
+  <rect class="b-mut" x="156" y="16" width="142" height="42" rx="11"/><text class="t" x="227" y="42" text-anchor="middle">Resell</text>
+  <rect class="b" x="310" y="16" width="142" height="42" rx="11"/><text class="t" x="381" y="42" text-anchor="middle">Co-sell</text>
+  <rect class="b-a" x="464" y="16" width="142" height="42" rx="11"/><text class="t" x="535" y="42" text-anchor="middle">Managed</text>
+  <rect class="b-a" x="618" y="16" width="140" height="42" rx="11"/><text class="t" x="688" y="42" text-anchor="middle">Embed</text>
+  <line class="ln" x1="20" y1="80" x2="740" y2="80" marker-end="url(#ar)" style="opacity:.4"/>
+  <text class="lab" x="20" y="74">LIGHTER TOUCH</text>
+  <text class="lab" x="740" y="74" text-anchor="end">DEEPER PARTNERSHIP</text>
+</svg>

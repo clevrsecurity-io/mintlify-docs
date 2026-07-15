@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="720" role="img"><style>
+text{font-family:Inter,-apple-system,system-ui,sans-serif}
+.b{fill:#171122;stroke:#2a2138;stroke-width:1.5}
+.b-a{fill:#241a3a;stroke:#3a2c56;stroke-width:1.5}
+.b-mut{fill:#141020;stroke:#2a2138;stroke-width:1.5}
+.b-gap{fill:#2a1620;stroke:#f0616c;stroke-width:1.6;stroke-dasharray:5 4}
+.t{fill:#ece9f3;font-size:13px;font-weight:600}
+.tm{fill:#a8a2b8;font-size:11.5px}
+.lab{fill:#6f6981;font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.09em}
+.ln{stroke:#6f6981;stroke-width:1.6;fill:none;opacity:.5}
+.ln-a{stroke:#9a72f0;stroke-width:2;fill:none}
+.acc{fill:#9a72f0}.mut{fill:#6f6981}
+.ok{fill:#3ecf8e}.hold{fill:#e0a13a}.block{fill:#f0616c}
+.axis{stroke:#2a2138;stroke-width:1.5}
+</style>
+<defs>
+<marker id="ar" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#6f6981"/></marker>
+<marker id="ara" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#9a72f0"/></marker>
+</defs>
+  <line class="axis" x1="72" y1="360" x2="726" y2="360" marker-end="url(#ar)"/>
+  <line class="axis" x1="72" y1="360" x2="72" y2="34" marker-end="url(#ar)"/>
+  <text class="lab" x="399" y="386" text-anchor="middle">OBSERVES  →  DECIDES IN-PATH</text>
+  <text class="lab" transform="translate(50,200) rotate(-90)" text-anchor="middle">LOGS  →  SIGNED PROOF</text>
+  <!-- competitor groups -->
+  <circle class="mut" cx="165" cy="312" r="5"/>
+  <text class="tm" x="178" y="309">Visibility</text><text class="lab" x="178" y="324">Zenity, Noma</text>
+  <circle class="mut" cx="205" cy="238" r="5"/>
+  <text class="tm" x="218" y="235">Identity / NHI</text><text class="lab" x="218" y="250">Okta, Oak, Orchid</text>
+  <circle class="mut" cx="380" cy="300" r="5"/>
+  <text class="tm" x="393" y="297">MCP gateways</text><text class="lab" x="393" y="312">Arcade, Kontext, Hodor</text>
+  <circle class="mut" cx="470" cy="232" r="5"/>
+  <text class="tm" x="483" y="229">Inference</text><text class="lab" x="483" y="244">Reva, Mitrity</text>
+  <!-- Clevr -->
+  <circle class="acc" cx="628" cy="108" r="17" opacity="0.14"/>
+  <circle class="acc" cx="628" cy="108" r="8"/>
+  <text class="t" x="648" y="104" style="fill:#9a72f0">Clevr</text>
+  <text class="tm" x="648" y="121">decides in-path + signs it</text>
+</svg>

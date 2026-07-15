@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 152" width="720" role="img"><style>
+text{font-family:Inter,-apple-system,system-ui,sans-serif}
+.b{fill:#171122;stroke:#2a2138;stroke-width:1.5}
+.b-a{fill:#241a3a;stroke:#3a2c56;stroke-width:1.5}
+.b-mut{fill:#141020;stroke:#2a2138;stroke-width:1.5}
+.b-gap{fill:#2a1620;stroke:#f0616c;stroke-width:1.6;stroke-dasharray:5 4}
+.t{fill:#ece9f3;font-size:13px;font-weight:600}
+.tm{fill:#a8a2b8;font-size:11.5px}
+.lab{fill:#6f6981;font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.09em}
+.ln{stroke:#6f6981;stroke-width:1.6;fill:none;opacity:.5}
+.ln-a{stroke:#9a72f0;stroke-width:2;fill:none}
+.acc{fill:#9a72f0}.mut{fill:#6f6981}
+.ok{fill:#3ecf8e}.hold{fill:#e0a13a}.block{fill:#f0616c}
+.axis{stroke:#2a2138;stroke-width:1.5}
+</style>
+<defs>
+<marker id="ar" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#6f6981"/></marker>
+<marker id="ara" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#9a72f0"/></marker>
+</defs>
+  <rect class="b-mut" x="1" y="48" width="150" height="60" rx="12"/>
+  <circle class="ok" cx="22" cy="66" r="4"/>
+  <text class="t" x="82" y="74" text-anchor="middle">Identity</text>
+  <text class="tm" x="82" y="92" text-anchor="middle">who it is</text>
+  <path class="ln" d="M151 78 H185" marker-end="url(#ar)"/>
+  <rect class="b-mut" x="191" y="48" width="150" height="60" rx="12"/>
+  <circle class="ok" cx="212" cy="66" r="4"/>
+  <text class="t" x="266" y="74" text-anchor="middle">Access</text>
+  <text class="tm" x="266" y="92" text-anchor="middle">what it can reach</text>
+  <path class="ln" d="M341 78 H375" marker-end="url(#ar)"/>
+  <text class="lab" x="479" y="24" text-anchor="middle" style="fill:#f0616c">THE ACTION GAP</text>
+  <rect class="b-gap" x="381" y="34" width="196" height="86" rx="13"/>
+  <text class="t" x="479" y="64" text-anchor="middle">The action</text>
+  <text class="tm" x="479" y="83" text-anchor="middle" style="fill:#f0616c">should this run?</text>
+  <text class="block" x="479" y="105" text-anchor="middle" style="font-size:12.5px;font-weight:700">nobody decides this</text>
+  <path class="ln" d="M577 78 H611" marker-end="url(#ar)"/>
+  <rect class="b-mut" x="617" y="48" width="142" height="60" rx="12"/>
+  <text class="t" x="688" y="74" text-anchor="middle">Runs</text>
+  <text class="tm" x="688" y="92" text-anchor="middle">on your systems</text>
+</svg>

@@ -1,72 +1,75 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "name": "Clevr Playbook",
+  "description": "Internal Clevr sales & channel playbook. Confidential.",
+  "seo": {
+    "metatags": {
+      "robots": "noindex, nofollow"
+    }
   },
-  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#4d0fb3",
+    "light": "#9a72f0",
+    "dark": "#4d0fb3"
+  },
+  "favicon": "/images/favicon.svg",
+  "logo": {
+    "light": "/images/logo-light.svg",
+    "dark": "/images/logo-dark.svg"
+  },
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "Getting Started",
+        "group": "Start here",
         "pages": [
-          "index",
-          "quickstart"
+          "overview",
+          "action-gap",
+          "how-it-works"
+        ]
+      },
+      {
+        "group": "Who we sell to",
+        "pages": [
+          "icp",
+          "personas",
+          "qualify"
+        ]
+      },
+      {
+        "group": "How we sell",
+        "pages": [
+          "messaging",
+          "discovery",
+          "demo",
+          "pilot",
+          "objections"
+        ]
+      },
+      {
+        "group": "Competitive",
+        "pages": [
+          "landscape"
+        ]
+      },
+      {
+        "group": "Channel & partners",
+        "pages": [
+          "channel-why",
+          "partner-types",
+          "ipp",
+          "mssp",
+          "alliances"
+        ]
+      },
+      {
+        "group": "Assets",
+        "pages": [
+          "pricing",
+          "templates",
+          "talktrack"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }

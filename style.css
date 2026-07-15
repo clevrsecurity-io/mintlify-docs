@@ -1,0 +1,4 @@
+.lede{font-size:1.08rem;line-height:1.6;color:var(--gray-600,#565064)}
+.pill{display:inline-flex;align-items:center;gap:6px;font-family:ui-monospace,Menlo,monospace;font-size:12px;font-weight:600;padding:2px 9px;border-radius:6px}
+.pill.ok{color:#0f9d58;background:#e7f6ee}.pill.hold{color:#b7791f;background:#fbf1de}.pill.block{color:#d64550;background:#fdeaec}
+.dark .pill.ok{color:#3ecf8e;background:#12241b}.dark .pill.hold{color:#e0a13a;background:#241a0f}.dark .pill.block{color:#f0616c;background:#251215}

@@ -1,0 +1,57 @@
+---
+title: "How Clevr works"
+---
+
+<p className="lede">Clevr sits in-path at the point an agent acts, runs each action through a deterministic-first cascade, returns a verdict in microseconds, and signs it. No change to the agent's code.</p>
+
+## The verdict
+
+<Frame caption="One verdict per action, in microseconds, then signed.">
+  <img className="block dark:hidden" src="/images/dg-how-it-works-1.svg" alt="One verdict per action, in microseconds, then signed." />
+  <img className="hidden dark:block" src="/images/dg-how-it-works-1-d.svg" alt="" />
+</Frame>
+
+## The four stages
+
+<p>Standard view shows four stages; the first three are <b>deterministic</b> (microseconds, always on). The fourth runs only when rules can't decide and only when reasoning is enabled.</p>
+
+<table>
+<thead><tr><th>Stage</th><th>Question</th><th>How</th></tr></thead>
+<tbody>
+<tr><td><b>WHO</b>, Identity</td><td>Is this agent allowed to exist and act?</td><td>Deterministic</td></tr>
+<tr><td><b>WHAT</b>, Authority</td><td>Is this action inside its mandate? (roles, rules, quotas, verb default-deny, content)</td><td>Deterministic</td></tr>
+<tr><td><b>HOW</b>, Behavior</td><td>Is it acting normally? (session trajectory, 30-day baseline, fleet correlation)</td><td>Deterministic</td></tr>
+<tr><td><b>WHY</b>, Reasoning</td><td>When rules can't decide, an LLM reasons over intent</td><td>Optional, off by default</td></tr>
+</tbody>
+</table>
+
+<Info>
+<span>The differentiator.</span> Rules-first means ~0 LLM calls in the common case: auditable, cheap, fast, versus a single-LLM-per-action approach that is non-deterministic and expensive.
+</Info>
+
+## Where it plugs in
+
+<p>Same policy, any path an agent acts through:</p>
+
+<CardGroup cols={2}>
+  <Card title="MCP gateway">
+  Give an agent its tools over MCP; Clevr governs every call. No agent code change.
+  </Card>
+  <Card title="SDK / frameworks">
+  Drop-in adapters (Anthropic, OpenAI, LangChain, CrewAI…).
+  </Card>
+  <Card title="LLM gateway">
+  Route model + tool calls through the gateway.
+  </Card>
+  <Card title="Direct API">
+  <code>POST /v1/evaluate</code> before the action.
+  </Card>
+</CardGroup>
+
+## The proof
+
+<p>Every decision is written to an append-only ledger and <b>signed (Ed25519)</b>, tamper-evident and verifiable offline. When an auditor asks "who did what, under which policy, and why", the evidence is already there. This is the line competitors can't match: logs vs a <i>signed receipt</i>.</p>
+
+## Deploy posture
+
+<p><b>Observe → Enforce.</b> Start in observe (would-allow/deny, zero risk), then flip enforcement on per unit/agent as trust builds. EU-hostable, single-tenant VM per client available.</p>

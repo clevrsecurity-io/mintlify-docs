@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 224" width="720" role="img"><style>
+text{font-family:Inter,-apple-system,system-ui,sans-serif}
+.b{fill:#171122;stroke:#2a2138;stroke-width:1.5}
+.b-a{fill:#241a3a;stroke:#3a2c56;stroke-width:1.5}
+.b-mut{fill:#141020;stroke:#2a2138;stroke-width:1.5}
+.b-gap{fill:#2a1620;stroke:#f0616c;stroke-width:1.6;stroke-dasharray:5 4}
+.t{fill:#ece9f3;font-size:13px;font-weight:600}
+.tm{fill:#a8a2b8;font-size:11.5px}
+.lab{fill:#6f6981;font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.09em}
+.ln{stroke:#6f6981;stroke-width:1.6;fill:none;opacity:.5}
+.ln-a{stroke:#9a72f0;stroke-width:2;fill:none}
+.acc{fill:#9a72f0}.mut{fill:#6f6981}
+.ok{fill:#3ecf8e}.hold{fill:#e0a13a}.block{fill:#f0616c}
+.axis{stroke:#2a2138;stroke-width:1.5}
+</style>
+<defs>
+<marker id="ar" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#6f6981"/></marker>
+<marker id="ara" markerWidth="9" markerHeight="9" refX="6.5" refY="4" orient="auto"><path d="M0 0 L7 4 L0 8 z" fill="#9a72f0"/></marker>
+</defs>
+  <text class="lab" x="106" y="82" text-anchor="middle" style="fill:#9a72f0">MANAGED GOVERNANCE</text>
+  <rect class="b-a" x="1" y="90" width="210" height="62" rx="14"/>
+  <text class="t" x="106" y="118" text-anchor="middle">MSSP</text>
+  <text class="tm" x="106" y="136" text-anchor="middle">one Clevr console</text>
+  <path class="ln-a" d="M211 121 C322 121 330 41 426 41" marker-end="url(#ara)"/>
+  <path class="ln-a" d="M211 121 H426" marker-end="url(#ara)"/>
+  <path class="ln-a" d="M211 121 C322 121 330 201 426 201" marker-end="url(#ara)"/>
+  <g>
+    <rect class="b" x="432" y="16" width="326" height="50" rx="12"/>
+    <circle class="ok" cx="454" cy="41" r="4.5"/>
+    <text class="t" x="470" y="38">Client A</text><text class="tm" x="470" y="54">own policy, own signed ledger</text>
+  </g>
+  <g>
+    <rect class="b" x="432" y="96" width="326" height="50" rx="12"/>
+    <circle class="ok" cx="454" cy="121" r="4.5"/>
+    <text class="t" x="470" y="118">Client B</text><text class="tm" x="470" y="134">data stays in-region</text>
+  </g>
+  <g>
+    <rect class="b" x="432" y="176" width="326" height="50" rx="12"/>
+    <circle class="ok" cx="454" cy="201" r="4.5"/>
+    <text class="t" x="470" y="198">Client C</text><text class="tm" x="470" y="214">audit-ready, no new hire</text>
+  </g>
+</svg>

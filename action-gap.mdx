@@ -1,0 +1,30 @@
+---
+title: "The action gap"
+---
+
+<p className="lede">An agent can be authenticated, perfectly in scope, and still take an action you would never approve. That space, between having access and the action being safe, is the action gap. It is where agents do damage, and it is ungoverned by default.</p>
+
+<Frame caption="Identity and access are solved. Nothing decides the action, until Clevr.">
+  <img className="block dark:hidden" src="/images/dg-action-gap-1.svg" alt="Identity and access are solved. Nothing decides the action, until Clevr." />
+  <img className="hidden dark:block" src="/images/dg-action-gap-1-d.svg" alt="" />
+</Frame>
+
+## Why it exists
+
+<ul>
+<li><b>Identity is not authorization.</b> Your IdP (Okta, Entra) says an agent is who it claims. It does not decide whether <i>this action, on this resource, right now</i> should run.</li>
+<li><b>Access lists gate the tool, not the call.</b> The same tool is fine for a ticket contact and catastrophic to an attacker's inbox.</li>
+<li><b>Logs arrive after the fact.</b> By the time an action shows in the audit trail, it already ran. You get a post-mortem, not prevention.</li>
+</ul>
+
+## Three lines that land
+
+<Info>
+<p><span>The refactor that reached for prod.</span> A coding agent told to clean one module quietly pulls the production DB credentials it was never scoped for, on a shared key, so nothing flagged it.</p>
+<p><span>The support agent that went digging.</span> A support copilot queries payroll tables dozens of times in two minutes. Every call was individually allowed. Nothing checked whether the pattern still matched the mission.</p>
+<p><span>The data pull nobody saw leave.</span> A data agent reads analytics, then opens a connection to an endpoint no one has seen. The audit log caught it perfectly, the morning after it was gone.</p>
+</Info>
+
+## Why now
+
+<p>Agents moved from chat to <b>action</b>: they call tools, move money, touch regulated data. Boards are asking "who authorized that agent to do that?" and EU regulation (AI Act, DORA, NIS2) is making the answer mandatory. The unit of risk is the action, so the control belongs at the action, before it runs, and signed.</p>

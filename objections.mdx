@@ -1,0 +1,19 @@
+---
+title: "Objection handling"
+---
+
+<p className="lede">Most objections collapse to "isn't this already covered?". It isn't, because nothing else <i>decides the action, in-path, and signs it</i>.</p>
+
+<table>
+<thead><tr><th>Objection</th><th>Reframe</th></tr></thead>
+<tbody>
+<tr><td>"We'll build it with OPA / a webhook."</td><td>OPA is a policy engine, not the in-path decision, the behavioral baseline, the reasoning fallback, or the signed ledger tied to approvals. You'd rebuild all of that and own it forever.</td></tr>
+<tr><td>"Isn't this Zenity / Noma?"</td><td>They give visibility and posture. They don't sit in-path and decide allow/hold/block before the action, and they don't sign it.</td></tr>
+<tr><td>"We already have Okta / an NHI vault."</td><td>Those establish identity and hold credentials. They don't decide whether <i>this action</i> should run. We use their signals and add the decision + proof, downstream.</td></tr>
+<tr><td>"Isn't this Arcade / a gateway?"</td><td>A gateway routes and authenticates the call; its governance hook is an empty webhook you must fill. We are the decision that fills it, with a signed receipt and behavioral cascade.</td></tr>
+<tr><td>"An LLM per action is too slow / risky."</td><td>Agreed. We're deterministic-first: microseconds, ~0 LLM calls in the common case. Reasoning is optional and only when rules can't decide.</td></tr>
+<tr><td>"ServiceNow already gates changes."</td><td>It gates humans and tickets. Agents bypass it at machine speed. We're in-path for the agent's action.</td></tr>
+<tr><td>"This will slow us down."</td><td>Compliant actions auto-approve at full speed. Only risky routes are held. Observe-mode stats prove the ratio before you enforce.</td></tr>
+<tr><td>"Why a startup for something this critical?"</td><td>EU-sovereign, single-tenant deployable, signed evidence you hold, no lock-in. Start in observe, the risk is a config, not a bet.</td></tr>
+</tbody>
+</table>

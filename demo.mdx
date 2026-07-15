@@ -1,0 +1,18 @@
+---
+title: "Demo sequence"
+---
+
+<p className="lede">Show the gap, then close it live: a real agent drifts off-mandate, Clevr stops it, and hands you a signed receipt.</p>
+<ol>
+<li><b>Frame (2 min).</b> The action gap, one of the three stories from their world.</li>
+<li><b>Architecture (2 min).</b> Clevr in the path: <code>Agent → Clevr decision → Systems</code>. Same policy over MCP/SDK/gateway/API.</li>
+<li><b>Live activity (4 min).</b> The console log: real agents, allow / hold / block, reasons (off-intent, out of mandate, PII redacted, needs approval).</li>
+<li><b>Scenario 1, drift (5 min).</b> A support copilot tries <code>crm.export_customers</code>; WHAT/Authority = not in mandate → <span className="pill block">Block</span>. Show the reason.</li>
+<li><b>Scenario 2, approval (4 min).</b> A financial action → <span className="pill hold">Hold</span> → human approves → scoped credential minted on-permit (nothing hoarded).</li>
+<li><b>Proof (4 min).</b> Open the signed receipt; verify it offline; export to their ITSM/GRC.</li>
+<li><b>Close (3 min).</b> Propose the 30-45 day observe→enforce pilot on one agent + one path.</li>
+</ol>
+
+<Check>
+<span>Rehearse this.</span> Verifying the signed receipt offline is the one thing no visibility, gateway, or identity vendor can show.
+</Check>

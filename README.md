@@ -1,55 +1,45 @@
-# Mintlify Starter Kit
+# Clevr Sales & Channel Playbook — Mintlify source
 
-Use the starter kit to get your docs deployed and ready to customize.
+Internal, confidential. This folder is a self-contained Mintlify docs project for the
+playbook. Mintlify renders these files; there is no build step and nothing is stored
+in Mintlify itself. Change the files, push, Mintlify redeploys.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## What's here
+- `docs.json` — nav, theme (Clevr violet), logo, `noindex` (hidden from search engines).
+- `*.mdx` — one page per playbook section (20 pages, grouped in `docs.json`).
+- `style.css` — small custom CSS (verdict pills, intro lede).
+- `images/` — logo (light/dark), favicon, and the diagrams as **light + dark SVG pairs**
+  (`dg-*.svg` light, `dg-*-d.svg` dark; the `.mdx` shows the right one per theme).
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
-
+## Preview locally (no Node needed, uses Docker)
 ```bash
-npx skills add https://mintlify.com/docs
+cd "path/to/playbook-mintlify"
+docker run --rm -it -p 3000:3000 -v "$PWD:/docs" -w /docs node:22-alpine \
+  sh -c "npm i -g mint && mint dev"
+# open http://localhost:3000
 ```
+Do this before you connect it, to confirm it renders.
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+## Publish it (one time)
+Keep this SEPARATE from the public product docs (it names competitors + pricing).
+1. Put this folder in its **own private GitHub repo**.
+2. In the Mintlify dashboard, **connect that repo**; set the docs directory to the repo root.
+3. Push. Mintlify deploys on every push to the connected branch.
+4. Custom domain: point a subdomain, e.g. **`partners.clevrsecurity.com`**, at the target Mintlify gives you.
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+After that, updating = edit an `.mdx`, commit, push. Live in seconds.
 
-## Development
+## Gating it (the "login" question)
+- **Share by link (any plan):** it's live at your URL, `noindex` keeps it out of search,
+  but anyone with the link can open it. This is "unlisted", not private.
+- **Real login (paid plan):** Mintlify Authentication gates the whole site. Simplest is a
+  **shared password**; for per-partner access use **SSO/JWT** wired to your app. Configure
+  it in the Mintlify dashboard once you're on a plan that includes it.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
-```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+## Editing the content
+- Text/tables/callouts: edit the `.mdx` directly (Mintlify components: `<Info>`, `<Warning>`,
+  `<Check>`, `<Card>`, `<CardGroup>`, `<Frame>`).
+- Diagrams: they're SVG files in `images/`. To re-style, edit both the light and the dark
+  file, or regenerate from the source playbook.
+- Source of truth for the content is the playbook Artifact; this Mintlify copy was generated
+  from it. If you change one, mirror the other (or tell Claude to regenerate).
